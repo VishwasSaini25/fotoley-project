@@ -35,12 +35,12 @@ export default function App() {
     setIsPlaying(prevState => !prevState);
   }
   const handleNext = (index) => {     
-    if(index == 4){
+    if(index === 4){
       setActiveImg(0);
     } else setActiveImg(index+1);
   }
   const handlePrev = (index) => {     
-    if(index == 0){
+    if(index === 0){
       setActiveImg(4);
     } else setActiveImg(index-1);
   }
