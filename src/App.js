@@ -47,7 +47,7 @@ export default function App() {
   return (
     <Box sx={{ width: '100%', height: '100%' }}>
       <Grid container>
-        <Grid item xs={6} lg={7} className='left'>
+        <Grid item xs={6} md={6} lg={7} className='left'>
           <div className='second-div-left'>
             <div className='img-div'>
               <img src={data[activeImg].image} alt='logo' />
@@ -89,12 +89,12 @@ export default function App() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={6} lg={5} className='right'>
+        <Grid item xs={6} md={6} lg={5} className='right'>
           <div className='second-div-right'>
             <h1>{data[activeImg].title}</h1>
             <p>{data[activeImg].text}</p>
-            <div className='play-pause' onClick={() => handlePlayPause(activeImg)}>
-            {isPlaying ? <PauseCircle sx={{ fontSize : 80 }} /> : <PlayCircle sx={{ fontSize : 80 }} />}
+            <div className='play-pause'>
+            {isPlaying ? <PauseCircle onClick={() => handlePlayPause(activeImg)} sx={{ fontSize : 80 }} /> : <PlayCircle onClick={() => handlePlayPause(activeImg)} sx={{ fontSize : 80 }} />}
             </div>
           </div>
         </Grid>
